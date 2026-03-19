@@ -80,7 +80,7 @@ const translations = {
     },
     app: {
       title: "Download Our App",
-      description: "Your complete fitness companion — manage your membership, track your workouts, book sessions, and stay up to date with the latest offers. Available for free on iOS and Android.",
+      description: "Take RedBone Gym wherever you go. Our free mobile app puts everything you need right at your fingertips — manage your membership, track your workouts, and book your sessions with just a few taps. Get real-time notifications about the latest offers, schedule changes, and exclusive member deals. Whether you're planning your next session or checking your progress, the RedBone Gym app keeps you connected to your fitness journey 24/7. Available on both iOS and Android.",
       appStore: "App Store",
       playStore: "Google Play",
       downloadOn: "Download on the",
@@ -172,8 +172,8 @@ const translations = {
       send: "إرسال الرسالة",
     },
     app: {
-      title: "حمّل تطبيقنا",
-      description: "رفيقك الرياضي المتكامل — أدِر اشتراكك، تابع تمارينك، احجز جلساتك، وابقَ على اطّلاع بأحدث العروض. متاح مجانًا على iOS و Android.",
+      title: "حمّل الأبليكيشن بتاعنا",
+      description: "خد ريدبون جيم معاك في أي مكان. الأبليكيشن بتاعنا ببلاش وهيخليك تعمل كل حاجة من موبايلك — تدير اشتراكك، تتابع تمارينك، وتحجز جلساتك بضغطة زرار. هتوصلك إشعارات بأحدث العروض والخصومات الحصرية للأعضاء، وأي تغيير في المواعيد هتعرفه أول بأول. سواء بتخطط لتمرينك الجاي أو عايز تشوف تقدمك، الأبليكيشن هيفضل معاك ٢٤ ساعة. متاح على iOS و Android.",
       appStore: "App Store",
       playStore: "Google Play",
       downloadOn: "حمّل من",
