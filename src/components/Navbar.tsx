@@ -17,9 +17,9 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0D0E12]/95 backdrop-blur-sm border-b border-[#323232]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-16 items-center justify-between">
           <a href="#home" className="flex items-center">
-            <img src="/logo.png" alt="RedBone Gym" className="h-14 w-auto" />
+            <img src="/logo.png" alt="RedBone Gym" className="h-10 w-auto" />
           </a>
 
           {/* Desktop nav */}
