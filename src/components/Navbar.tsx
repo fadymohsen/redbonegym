@@ -48,9 +48,10 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
               ))}
               <a
                 href={locale === "ar" ? "/en" : "/ar"}
-                className="text-sm font-medium text-[#CC2421] hover:text-[#F6E8D1] transition-colors"
+                className="text-xl hover:opacity-80 transition-opacity"
+                title={locale === "ar" ? "English" : "العربية"}
               >
-                {locale === "ar" ? "English" : "العربية"}
+                {locale === "ar" ? "🇬🇧" : "🇪🇬"}
               </a>
             </div>
 
@@ -109,7 +110,7 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
             <a
               href={locale === "ar" ? "/en" : "/ar"}
               onClick={() => setMobileOpen(false)}
-              className={`w-full text-center py-4 text-xl font-semibold tracking-wide text-[#CC2421] hover:text-[#F6E8D1] transition-all duration-500 ease-out ${
+              className={`w-full text-center py-4 text-3xl transition-all duration-500 ease-out hover:opacity-80 ${
                 mobileOpen
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"
@@ -117,8 +118,9 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
               style={{
                 transitionDelay: mobileOpen ? `${150 + navLinks.length * 80}ms` : "0ms",
               }}
+              title={locale === "ar" ? "English" : "العربية"}
             >
-              {locale === "ar" ? "English" : "العربية"}
+              {locale === "ar" ? "🇬🇧" : "🇪🇬"}
             </a>
           </div>
 
