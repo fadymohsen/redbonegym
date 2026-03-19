@@ -5,6 +5,7 @@ import About from "@/components/About";
 import Gallery from "@/components/Gallery";
 import Subscriptions from "@/components/Subscriptions";
 import Activities from "@/components/Activities";
+import MobileApp from "@/components/MobileApp";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -19,6 +20,7 @@ export default function ArabicHome() {
         <Gallery locale="ar" />
         <Subscriptions locale="ar" />
         {/* <Activities locale="ar" /> */}
+        <MobileApp locale="ar" />
         <Contact locale="ar" />
       </main>
       <Footer locale="ar" />
