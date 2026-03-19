@@ -15,10 +15,10 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0D0E12]/95 backdrop-blur-sm border-b border-[#323232]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <a href="#home" className="text-2xl font-extrabold tracking-wider text-[#b51112]">
+          <a href="#home" className="text-2xl font-extrabold tracking-wider text-[#CC2421]">
             REDBONE GYM
           </a>
 
@@ -28,7 +28,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                className="text-sm font-medium text-[#7F7F7F] hover:text-[#F6E8D1] transition-colors"
               >
                 {link.label}
               </a>
@@ -37,7 +37,7 @@ export default function Navbar() {
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden text-gray-300 hover:text-white"
+            className="md:hidden text-[#7F7F7F] hover:text-[#F6E8D1]"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -48,14 +48,14 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-black border-t border-gray-800">
+        <div className="md:hidden bg-[#0D0E12] border-t border-[#323232]">
           <div className="flex flex-col gap-1 px-4 py-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-800 hover:text-white transition-colors"
+                className="rounded-md px-3 py-2 text-sm font-medium text-[#7F7F7F] hover:bg-[#323232] hover:text-[#F6E8D1] transition-colors"
               >
                 {link.label}
               </a>
