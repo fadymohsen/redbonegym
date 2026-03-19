@@ -35,14 +35,15 @@ export default function Footer({ locale = "en" }: { locale?: Locale }) {
           {/* Working Hours */}
           <div>
             <h4 className="mb-4 font-semibold text-[#F6E8D1]">{content.footer.workingHours}</h4>
-            <ul className="space-y-1.5">
+            <div className="space-y-2">
               {workingHours.map((item) => (
-                <li key={item.day.en} className="flex justify-between text-sm gap-4">
-                  <span className="text-[#7F7F7F]">{item.day[locale]}</span>
-                  <span className="text-[#F6E8D1] font-medium">{item.hours}</span>
-                </li>
+                <div key={item.day.en} className="flex items-center gap-2 text-sm">
+                  <span className="text-[#F6E8D1] font-medium min-w-[90px]">{item.day[locale]}</span>
+                  <span className="text-[#7F7F7F]">·</span>
+                  <span className="text-[#7F7F7F]">{item.hours}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Social & App Links */}

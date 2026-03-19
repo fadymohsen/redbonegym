@@ -16,7 +16,7 @@ export default function MobileApp({ locale = "en" }: { locale?: Locale }) {
             <p className="text-[#7F7F7F] leading-relaxed mb-8 text-lg">
               {content.app.description}
             </p>
-            <div className={`flex flex-wrap gap-4 ${isAr ? "justify-end" : ""}`}>
+            <div className={`flex flex-wrap gap-4 ${isAr ? "justify-start" : ""}`}>
               <a
                 href="https://apps.apple.com/eg/app/redbone-gym/id6748324835"
                 target="_blank"
