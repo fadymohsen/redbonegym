@@ -8,20 +8,20 @@ import Activities from "@/components/Activities";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
-export default function Home() {
+export default function ArabicHome() {
   return (
     <>
-      <Navbar locale="en" />
+      <Navbar locale="ar" />
       <main>
-        <Hero locale="en" />
-        <Features locale="en" />
-        <About locale="en" />
-        <Gallery locale="en" />
-        <Subscriptions locale="en" />
-        <Activities locale="en" />
-        <Contact locale="en" />
+        <Hero locale="ar" />
+        <Features locale="ar" />
+        <About locale="ar" />
+        <Gallery locale="ar" />
+        <Subscriptions locale="ar" />
+        <Activities locale="ar" />
+        <Contact locale="ar" />
       </main>
-      <Footer locale="en" />
+      <Footer locale="ar" />
     </>
   );
 }

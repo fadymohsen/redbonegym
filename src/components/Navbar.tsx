@@ -2,17 +2,19 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Locale, t } from "@/lib/translations";
 
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Subscriptions", href: "#subscriptions" },
-  { label: "Facilities", href: "#activities" },
-  { label: "Contact Us", href: "#contact" },
-];
-
-export default function Navbar() {
+export default function Navbar({ locale = "en" }: { locale?: Locale }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const content = t(locale);
+
+  const navLinks = [
+    { label: content.nav.about, href: "#about" },
+    { label: content.nav.gallery, href: "#gallery" },
+    { label: content.nav.subscriptions, href: "#subscriptions" },
+    { label: content.nav.facilities, href: "#activities" },
+    { label: content.nav.contact, href: "#contact" },
+  ];
 
   useEffect(() => {
     if (mobileOpen) {
@@ -45,6 +47,12 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
+              <a
+                href={locale === "ar" ? "/en" : "/ar"}
+                className="text-sm font-medium text-[#CC2421] hover:text-[#F6E8D1] transition-colors"
+              >
+                {locale === "ar" ? "English" : "العربية"}
+              </a>
             </div>
 
             {/* Mobile toggle */}
@@ -67,16 +75,12 @@ export default function Navbar() {
             : "opacity-0 pointer-events-none"
         }`}
       >
-        {/* Background */}
         <div className="absolute inset-0 bg-[#0D0E12]" />
 
-        {/* Decorative accent */}
         <div className="absolute top-0 right-0 w-72 h-72 bg-[#CC2421]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-56 h-56 bg-[#CC2421]/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
 
-        {/* Menu content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-8">
-          {/* Logo */}
           <img
             src="/logo.png"
             alt="RedBone Gym"
@@ -85,7 +89,6 @@ export default function Navbar() {
             }`}
           />
 
-          {/* Nav links */}
           <div className="flex flex-col items-center gap-2 w-full max-w-xs">
             {navLinks.map((link, i) => (
               <a
@@ -104,9 +107,22 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+            <a
+              href={locale === "ar" ? "/en" : "/ar"}
+              onClick={() => setMobileOpen(false)}
+              className={`w-full text-center py-4 text-xl font-semibold tracking-wide text-[#CC2421] hover:text-[#F6E8D1] transition-all duration-500 ease-out ${
+                mobileOpen
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
+              }`}
+              style={{
+                transitionDelay: mobileOpen ? `${150 + navLinks.length * 80}ms` : "0ms",
+              }}
+            >
+              {locale === "ar" ? "English" : "العربية"}
+            </a>
           </div>
 
-          {/* Bottom accent line */}
           <div
             className={`mt-12 h-0.5 bg-gradient-to-r from-transparent via-[#CC2421] to-transparent transition-all duration-700 ease-out ${
               mobileOpen ? "w-32 opacity-100" : "w-0 opacity-0"

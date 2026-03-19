@@ -1,19 +1,22 @@
 "use client";
 
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Locale, t } from "@/lib/translations";
 
-const contactInfo = [
-  { icon: MapPin, label: "Address", value: "3 Gamal El-Din Dwidar St., off Abbas El-Akkad, Nasr City, Cairo", href: undefined },
-  { icon: Mail, label: "Email", value: "ahmedmagedzzz1997@gmail.com", href: "mailto:ahmedmagedzzz1997@gmail.com" },
-  { icon: Phone, label: "Phone", value: "+201068521676", href: "tel:+201068521676" },
-];
+export default function Contact({ locale = "en" }: { locale?: Locale }) {
+  const content = t(locale);
 
-export default function Contact() {
+  const contactInfo = [
+    { icon: MapPin, label: content.contact.address, value: content.contact.addressValue, href: undefined },
+    { icon: Mail, label: content.contact.email, value: "ahmedmagedzzz1997@gmail.com", href: "mailto:ahmedmagedzzz1997@gmail.com" },
+    { icon: Phone, label: content.contact.phone, value: "+201068521676", href: "tel:+201068521676" },
+  ];
+
   return (
     <section id="contact" className="bg-[#0D0E12] py-20 px-4">
       <div className="mx-auto max-w-7xl">
         <h2 className="text-center text-4xl font-bold text-[#F6E8D1] mb-4">
-          Contact Us
+          {content.contact.title}
         </h2>
         <div className="mx-auto mb-12 h-1 w-20 bg-[#CC2421] rounded" />
 
@@ -46,16 +49,16 @@ export default function Contact() {
           >
             <input
               type="text"
-              placeholder="Your Name"
+              placeholder={content.contact.namePlaceholder}
               className="rounded-lg border border-[#323232] bg-[#323232]/50 px-4 py-3 text-[#F6E8D1] placeholder-[#7F7F7F] focus:border-[#CC2421] focus:outline-none transition-colors"
             />
             <input
               type="email"
-              placeholder="Your Email"
+              placeholder={content.contact.emailPlaceholder}
               className="rounded-lg border border-[#323232] bg-[#323232]/50 px-4 py-3 text-[#F6E8D1] placeholder-[#7F7F7F] focus:border-[#CC2421] focus:outline-none transition-colors"
             />
             <textarea
-              placeholder="Your Message"
+              placeholder={content.contact.messagePlaceholder}
               rows={5}
               className="rounded-lg border border-[#323232] bg-[#323232]/50 px-4 py-3 text-[#F6E8D1] placeholder-[#7F7F7F] focus:border-[#CC2421] focus:outline-none transition-colors resize-none"
             />
@@ -63,7 +66,7 @@ export default function Contact() {
               type="submit"
               className="rounded-lg bg-[#CC2421] py-3 font-semibold text-[#F6E8D1] hover:bg-[#a01d1a] transition-colors"
             >
-              Send Message
+              {content.contact.send}
             </button>
           </form>
         </div>
