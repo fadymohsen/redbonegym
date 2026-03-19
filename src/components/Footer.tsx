@@ -1,7 +1,7 @@
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram, Twitter, Youtube, MessageCircle } from "lucide-react";
 import { Locale, t } from "@/lib/translations";
 
-const socialIcons = [Facebook, Instagram, Twitter, Youtube];
+const socialIcons = [Facebook, Instagram, Twitter, Youtube, MessageCircle];
 
 export default function Footer({ locale = "en" }: { locale?: Locale }) {
   const content = t(locale);
@@ -50,7 +50,9 @@ export default function Footer({ locale = "en" }: { locale?: Locale }) {
               {socialIcons.map((Icon, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={Icon === MessageCircle ? "https://wa.me/201068521676" : "#"}
+                  target={Icon === MessageCircle ? "_blank" : undefined}
+                  rel={Icon === MessageCircle ? "noopener noreferrer" : undefined}
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-[#323232] text-[#7F7F7F] hover:bg-[#CC2421] hover:text-[#F6E8D1] transition-colors"
                 >
                   <Icon className="h-5 w-5" />
