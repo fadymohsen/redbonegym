@@ -7,14 +7,13 @@ export default function About({ locale = "en" }: { locale?: Locale }) {
     <section id="about" className="bg-[#0D0E12] py-20 px-4">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-2 items-center">
-          {/* Placeholder image */}
-          <div className="flex h-80 lg:h-[28rem] flex-col items-center justify-center rounded-xl bg-gradient-to-br from-[#CC2421]/20 to-[#323232]/50">
-            <span className="text-lg font-semibold text-[#F6E8D1]/70">
-              {content.about.name}
-            </span>
-            <span className="mt-2 text-sm font-bold tracking-widest uppercase text-[#CC2421]">
-              {content.about.role}
-            </span>
+          {/* Owner image */}
+          <div className="h-80 lg:h-[28rem] overflow-hidden rounded-xl">
+            <img
+              src="/owner.jpg"
+              alt={content.about.name}
+              className="h-full w-full object-cover object-top"
+            />
           </div>
 
           {/* Text */}
