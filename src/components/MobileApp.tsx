@@ -9,7 +9,7 @@ export default function MobileApp({ locale = "en" }: { locale?: Locale }) {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           {/* Text */}
-          <div className={isAr ? "lg:order-2 text-right" : ""}>
+          <div className={isAr ? "lg:order-1 text-right" : ""}>
             <h2 className="text-4xl font-bold text-[#F6E8D1] mb-6">
               {content.app.title}
             </h2>
@@ -49,7 +49,7 @@ export default function MobileApp({ locale = "en" }: { locale?: Locale }) {
           </div>
 
           {/* App mockup image */}
-          <div className={`flex items-center justify-center ${isAr ? "lg:order-1" : ""}`}>
+          <div className={`flex items-center justify-center ${isAr ? "lg:order-2" : ""}`}>
             <div className="relative w-64 sm:w-72 lg:w-80">
               <img
                 src="/app-mockup.jpg"
