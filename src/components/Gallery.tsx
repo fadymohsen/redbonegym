@@ -1,15 +1,15 @@
 import { Locale, t } from "@/lib/translations";
 
-const gradients = [
-  "from-[#CC2421]/20 to-[#323232]",
-  "from-[#323232] to-[#CC2421]/15",
-  "from-[#CC2421]/15 to-[#0D0E12]",
-  "from-[#0D0E12] to-[#CC2421]/20",
-  "from-[#CC2421]/20 to-[#323232]",
-  "from-[#323232] to-[#CC2421]/15",
-  "from-[#CC2421]/15 to-[#323232]",
-  "from-[#323232] to-[#0D0E12]",
-  "from-[#0D0E12] to-[#CC2421]/20",
+const images = [
+  "/gallery-1.jpg",
+  "/gallery-2.jpg",
+  "/gallery-3.jpg",
+  "/gallery-4.jpg",
+  "/gallery-5.jpg",
+  "/gallery-6.jpg",
+  "/gallery-7.jpg",
+  "/gallery-8.jpg",
+  "/gallery-9.jpg",
 ];
 
 export default function Gallery({ locale = "en" }: { locale?: Locale }) {
@@ -29,10 +29,13 @@ export default function Gallery({ locale = "en" }: { locale?: Locale }) {
               key={label}
               className="group relative flex h-56 items-center justify-center overflow-hidden rounded-xl transition-transform duration-300 hover:scale-105 cursor-pointer"
             >
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${gradients[i]}`}
+              <img
+                src={images[i]}
+                alt={label}
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <span className="relative z-10 text-lg font-semibold text-[#F6E8D1]/80 group-hover:text-[#F6E8D1] transition-colors">
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
+              <span className="relative z-10 text-lg font-semibold text-[#F6E8D1] drop-shadow-lg">
                 {label}
               </span>
             </div>
