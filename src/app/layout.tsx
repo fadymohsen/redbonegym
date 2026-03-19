@@ -7,6 +7,25 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.png",
   },
+  openGraph: {
+    title: "Redbone Gym",
+    description: "Redbone Gym - Science-Based Fitness Journey",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 400,
+        alt: "RedBone Gym Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Redbone Gym",
+    description: "Redbone Gym - Science-Based Fitness Journey",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({
