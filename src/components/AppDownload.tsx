@@ -8,7 +8,7 @@ export default function AppDownload() {
           {/* Text */}
           <div>
             <h2 className="text-4xl font-bold text-white mb-4">
-              Download <span className="text-red-600">Mobile Application</span>
+              Download <span className="text-[#b51112]">Mobile Application</span>
             </h2>
             <p className="text-gray-400 leading-relaxed mb-8 text-lg">
               Stay connected with us anytime, anywhere! Download our mobile app
@@ -45,7 +45,7 @@ export default function AppDownload() {
 
           {/* Placeholder phone mockup */}
           <div className="flex items-center justify-center">
-            <div className="flex h-96 w-52 flex-col items-center justify-center rounded-3xl bg-gradient-to-b from-red-900 to-gray-900 border-4 border-gray-700">
+            <div className="flex h-96 w-52 flex-col items-center justify-center rounded-3xl bg-gradient-to-b from-[#b51112]/30 to-gray-900 border-4 border-gray-700">
               <Smartphone className="h-16 w-16 text-white/40 mb-4" />
               <span className="text-sm font-semibold text-white/70 text-center px-4">
                 RedBone Gym App

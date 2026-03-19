@@ -3,19 +3,19 @@ const activities = [
     title: "Enjoy 1 Day",
     description:
       "Experience our gym with a complimentary one-day trial session and see what RedBone Gym has to offer.",
-    gradient: "from-red-900 to-gray-900",
+    gradient: "from-[#b51112]/30 to-gray-900",
   },
   {
     title: "InBody",
     description:
       "Get a detailed InBody body composition analysis to track your progress and fine-tune your training plan.",
-    gradient: "from-gray-800 to-red-950",
+    gradient: "from-gray-800 to-[#b51112]/20",
   },
   {
     title: "Physical Therapy",
     description:
       "Professional physical therapy sessions for recovery, rehabilitation, and injury prevention.",
-    gradient: "from-red-950 to-gray-800",
+    gradient: "from-[#b51112]/20 to-gray-800",
   },
 ];
 
@@ -26,13 +26,13 @@ export default function Activities() {
         <h2 className="text-center text-4xl font-bold text-white mb-4">
           Activities &amp; Services
         </h2>
-        <div className="mx-auto mb-12 h-1 w-20 bg-red-600 rounded" />
+        <div className="mx-auto mb-12 h-1 w-20 bg-[#b51112] rounded" />
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {activities.map((item) => (
             <div
               key={item.title}
-              className="overflow-hidden rounded-xl bg-gray-900 border border-gray-800 hover:border-red-600/50 transition-colors"
+              className="overflow-hidden rounded-xl bg-gray-900 border border-gray-800 hover:border-[#b51112]/50 transition-colors"
             >
               <div
                 className={`flex h-48 items-center justify-center bg-gradient-to-br ${item.gradient}`}

@@ -6,7 +6,6 @@ const quickLinks = [
   { label: "Subscriptions", href: "#subscriptions" },
   { label: "Gallery", href: "#gallery" },
   { label: "Activities", href: "#activities" },
-  { label: "Contact", href: "#contact" },
 ];
 
 const socialIcons = [Facebook, Instagram, Twitter, Youtube];
@@ -18,7 +17,7 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-10">
           {/* Logo */}
           <div>
-            <span className="text-2xl font-extrabold tracking-wider text-red-600">
+            <span className="text-2xl font-extrabold tracking-wider text-[#b51112]">
               REDBONE GYM
             </span>
             <p className="mt-3 text-sm text-gray-500 leading-relaxed max-w-xs">
@@ -52,7 +51,7 @@ export default function Footer() {
                 <a
                   key={i}
                   href="#"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-red-600 hover:text-white transition-colors"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-[#b51112] hover:text-white transition-colors"
                 >
                   <Icon className="h-5 w-5" />
                 </a>
@@ -65,7 +64,7 @@ export default function Footer() {
           <span>&copy; 2026 RedBone Gym. All rights reserved.</span>
           <span>
             Designed and developed by{" "}
-            <a href="https://gymmawy.com" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-400 transition-colors">
+            <a href="https://gymmawy.com" target="_blank" rel="noopener noreferrer" className="text-[#b51112] hover:text-[#d41415] transition-colors">
               Gymmawy
             </a>
           </span>

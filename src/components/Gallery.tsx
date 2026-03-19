@@ -1,10 +1,10 @@
 const galleryItems = [
-  { label: "Gym Floor", gradient: "from-red-900 to-gray-800" },
-  { label: "Weight Area", gradient: "from-gray-800 to-red-950" },
-  { label: "Cardio Zone", gradient: "from-red-950 to-gray-900" },
-  { label: "Training Area", gradient: "from-gray-900 to-red-900" },
-  { label: "Equipment", gradient: "from-red-800 to-gray-900" },
-  { label: "Locker Room", gradient: "from-gray-800 to-red-900" },
+  { label: "Gym Floor", gradient: "from-[#b51112]/30 to-gray-800" },
+  { label: "Weight Area", gradient: "from-gray-800 to-[#b51112]/20" },
+  { label: "Cardio Zone", gradient: "from-[#b51112]/20 to-gray-900" },
+  { label: "Training Area", gradient: "from-gray-900 to-[#b51112]/30" },
+  { label: "Equipment", gradient: "from-[#b51112]/25 to-gray-900" },
+  { label: "Locker Room", gradient: "from-gray-800 to-[#b51112]/30" },
 ];
 
 export default function Gallery() {
@@ -14,7 +14,7 @@ export default function Gallery() {
         <h2 className="text-center text-4xl font-bold text-white mb-4">
           Our Facility
         </h2>
-        <div className="mx-auto mb-12 h-1 w-20 bg-red-600 rounded" />
+        <div className="mx-auto mb-12 h-1 w-20 bg-[#b51112] rounded" />
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {galleryItems.map((item) => (

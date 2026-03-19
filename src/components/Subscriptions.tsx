@@ -42,7 +42,7 @@ export default function Subscriptions() {
         <h2 className="text-center text-4xl font-bold text-white mb-4">
           Subscriptions
         </h2>
-        <div className="mx-auto mb-12 h-1 w-20 bg-red-600 rounded" />
+        <div className="mx-auto mb-12 h-1 w-20 bg-[#b51112] rounded" />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {plans.map((plan) => (
@@ -50,12 +50,12 @@ export default function Subscriptions() {
               key={plan.name}
               className={`relative rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:scale-105 ${
                 plan.featured
-                  ? "bg-gray-900 border-2 border-red-600 ring-1 ring-red-600/30 lg:scale-105"
+                  ? "bg-gray-900 border-2 border-[#b51112] ring-1 ring-[#b51112]/30 lg:scale-105"
                   : "bg-gray-900 border border-gray-800"
               }`}
             >
               {plan.badge && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-red-600 px-4 py-1 text-xs font-bold text-white uppercase tracking-wider">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#b51112] px-4 py-1 text-xs font-bold text-white uppercase tracking-wider">
                   {plan.badge}
                 </span>
               )}
@@ -74,7 +74,7 @@ export default function Subscriptions() {
               </div>
 
               <div className="my-6">
-                <span className="text-3xl font-extrabold text-red-600">
+                <span className="text-3xl font-extrabold text-[#b51112]">
                   {plan.price}
                 </span>
                 <span className="ml-1 text-gray-400 text-sm">E.P</span>
@@ -84,7 +84,7 @@ export default function Subscriptions() {
                 href="#contact"
                 className={`mt-auto w-full rounded-md py-2.5 text-sm font-semibold text-center transition-colors ${
                   plan.featured
-                    ? "bg-red-600 text-white hover:bg-red-700"
+                    ? "bg-[#b51112] text-white hover:bg-[#931010]"
                     : "bg-gray-800 text-white hover:bg-gray-700"
                 }`}
               >
@@ -101,7 +101,7 @@ export default function Subscriptions() {
           </p>
           <a
             href="tel:+201068521676"
-            className="inline-flex items-center gap-2 rounded-md bg-red-600 px-8 py-3 text-lg font-semibold text-white hover:bg-red-700 transition-colors"
+            className="inline-flex items-center gap-2 rounded-md bg-[#b51112] px-8 py-3 text-lg font-semibold text-white hover:bg-[#931010] transition-colors"
           >
             <Phone className="h-5 w-5" />
             Call now

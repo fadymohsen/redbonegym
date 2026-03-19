@@ -29,10 +29,10 @@ export default function Features() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="rounded-xl bg-gray-900 border border-gray-800 p-8 text-center hover:border-red-600/50 transition-colors"
+              className="rounded-xl bg-gray-900 border border-gray-800 p-8 text-center hover:border-[#b51112]/50 transition-colors"
             >
-              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-red-600/10">
-                <feature.icon className="h-8 w-8 text-red-600" />
+              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#b51112]/10">
+                <feature.icon className="h-8 w-8 text-[#b51112]" />
               </div>
               <h3 className="mb-3 text-xl font-bold text-white">
                 {feature.title}

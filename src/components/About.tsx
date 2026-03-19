@@ -4,18 +4,18 @@ export default function About() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           {/* Placeholder image */}
-          <div className="flex h-80 lg:h-[28rem] flex-col items-center justify-center rounded-xl bg-gradient-to-br from-red-900 to-gray-900">
+          <div className="flex h-80 lg:h-[28rem] flex-col items-center justify-center rounded-xl bg-gradient-to-br from-[#b51112]/30 to-gray-900">
             <span className="text-lg font-semibold text-white/70">
               Captain Maged
             </span>
-            <span className="mt-2 text-sm font-bold tracking-widest uppercase text-red-400">
+            <span className="mt-2 text-sm font-bold tracking-widest uppercase text-[#b51112]">
               Owner
             </span>
           </div>
 
           {/* Text */}
           <div>
-            <h3 className="text-sm font-bold tracking-widest uppercase text-red-500 mb-3">
+            <h3 className="text-sm font-bold tracking-widest uppercase text-[#b51112] mb-3">
               Owner
             </h3>
             <h2 className="text-4xl font-bold text-white mb-6">
