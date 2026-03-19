@@ -23,21 +23,18 @@ export default function Gallery({ locale = "en" }: { locale?: Locale }) {
         </h2>
         <div className="mx-auto mb-12 h-1 w-20 bg-[#CC2421] rounded" />
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {content.gallery.items.map((label, i) => (
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {images.map((src, i) => (
             <div
-              key={label}
-              className="group relative flex h-56 items-center justify-center overflow-hidden rounded-xl transition-transform duration-300 hover:scale-105 cursor-pointer"
+              key={i}
+              className="group relative overflow-hidden rounded-xl aspect-[4/3] cursor-pointer"
             >
               <img
-                src={images[i]}
-                alt={label}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                src={src}
+                alt={`Gallery ${i + 1}`}
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
-              <span className="relative z-10 text-lg font-semibold text-[#F6E8D1] drop-shadow-lg">
-                {label}
-              </span>
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500" />
             </div>
           ))}
         </div>
