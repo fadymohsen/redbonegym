@@ -2,36 +2,36 @@ import { Phone } from "lucide-react";
 
 const plans = [
   {
-    name: "1 Year",
-    price: "3,900.00",
-    days: 365,
-    sessions: 0,
-    featured: true,
-    badge: "Best Value",
-  },
-  {
-    name: "6 Months",
-    price: "2,500.00",
-    days: 180,
+    name: "1 Month",
+    price: "700",
+    days: 30,
     sessions: 0,
     featured: false,
     badge: null,
   },
   {
     name: "3 Months",
-    price: "1,600.00",
+    price: "1,600",
     days: 90,
     sessions: 0,
     featured: false,
     badge: null,
   },
   {
-    name: "1 Month",
-    price: "700.00",
-    days: 30,
+    name: "6 Months",
+    price: "2,500",
+    days: 180,
     sessions: 0,
     featured: false,
     badge: null,
+  },
+  {
+    name: "1 Year",
+    price: "3,900",
+    days: 365,
+    sessions: 0,
+    featured: true,
+    badge: "Best Value",
   },
 ];
 
@@ -77,7 +77,7 @@ export default function Subscriptions() {
                 <span className="text-3xl font-extrabold text-[#CC2421]">
                   {plan.price}
                 </span>
-                <span className="ml-1 text-[#7F7F7F] text-sm">E.P</span>
+                <span className="ml-1 text-[#7F7F7F] text-sm">EGP</span>
               </div>
 
               <a

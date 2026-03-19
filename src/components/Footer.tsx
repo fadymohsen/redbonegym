@@ -1,11 +1,11 @@
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 const quickLinks = [
-  { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Subscriptions", href: "#subscriptions" },
   { label: "Gallery", href: "#gallery" },
-  { label: "Activities", href: "#activities" },
+  { label: "Subscriptions", href: "#subscriptions" },
+  { label: "Facilities", href: "#activities" },
+  { label: "Contact Us", href: "#contact" },
 ];
 
 const socialIcons = [Facebook, Instagram, Twitter, Youtube];
@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-10">
           {/* Logo */}
           <div>
-            <img src="/logo.jpg" alt="RedBone Gym" className="h-12 w-auto" />
+            <img src="/logo.jpg" alt="RedBone Gym" className="h-16 w-auto" />
             <p className="mt-3 text-sm text-[#7F7F7F] leading-relaxed max-w-xs">
               Science-based fitness programs designed to transform your body and
               mind.
@@ -62,7 +62,7 @@ export default function Footer() {
           <span>&copy; 2026 RedBone Gym. All rights reserved.</span>
           <span>
             Powered by{" "}
-            <a href="https://veliq.tech" target="_blank" rel="noopener noreferrer" className="text-[#CC2421] hover:text-[#F6E8D1] transition-colors font-semibold">
+            <a href="https://www.veliq.co" target="_blank" rel="noopener noreferrer" className="text-[#CC2421] hover:text-[#F6E8D1] transition-colors font-semibold">
               VELIQ
             </a>
           </span>

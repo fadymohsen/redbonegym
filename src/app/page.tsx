@@ -20,7 +20,7 @@ export default function Home() {
         <Gallery />
         <Subscriptions />
         <Activities />
-        <AppDownload />
+        {/* <AppDownload /> */}
         <Contact />
       </main>
       <Footer />
