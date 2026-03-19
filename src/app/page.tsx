@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Navbar locale="en" />
       <main>
-        <Hero locale="en" />
+        <Hero />
         {/* <Features locale="en" /> */}
         <About locale="en" />
         <Gallery locale="en" />

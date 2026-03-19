@@ -13,7 +13,7 @@ export default function ArabicHome() {
     <>
       <Navbar locale="ar" />
       <main>
-        <Hero locale="ar" />
+        <Hero />
         {/* <Features locale="ar" /> */}
         <About locale="ar" />
         <Gallery locale="ar" />
