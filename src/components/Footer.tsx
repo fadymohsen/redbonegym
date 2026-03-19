@@ -17,9 +17,7 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-10">
           {/* Logo */}
           <div>
-            <span className="text-2xl font-extrabold tracking-wider text-[#CC2421]">
-              REDBONE GYM
-            </span>
+            <img src="/logo.jpg" alt="RedBone Gym" className="h-12 w-auto" />
             <p className="mt-3 text-sm text-[#7F7F7F] leading-relaxed max-w-xs">
               Science-based fitness programs designed to transform your body and
               mind.
