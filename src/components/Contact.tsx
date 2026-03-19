@@ -13,7 +13,7 @@ export default function Contact() {
     <section id="contact" className="bg-[#0D0E12] py-20 px-4">
       <div className="mx-auto max-w-7xl">
         <h2 className="text-center text-4xl font-bold text-[#F6E8D1] mb-4">
-          Contact Info.
+          Contact Us
         </h2>
         <div className="mx-auto mb-12 h-1 w-20 bg-[#CC2421] rounded" />
 
