@@ -1,8 +1,29 @@
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+import About from "@/components/About";
+import Gallery from "@/components/Gallery";
+import Subscriptions from "@/components/Subscriptions";
+import Activities from "@/components/Activities";
+import AppDownload from "@/components/AppDownload";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-black text-white">
-      <h1 className="text-5xl font-bold">Redbone Gym</h1>
-      <p className="mt-4 text-lg text-gray-400">Coming soon.</p>
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Features />
+        <About />
+        <Gallery />
+        <Subscriptions />
+        <Activities />
+        <AppDownload />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
