@@ -37,8 +37,8 @@ const translations = {
       bio2: "At RedBone Gym, we believe fitness is not just about lifting weights — it's about building a lifestyle. Every program is designed with anatomy, biomechanics, and your individual goals in mind. Our approach combines cutting-edge training methodologies with personalized nutrition plans to deliver real, lasting results.",
     },
     gallery: {
-      title: "Our Facility",
-      items: ["Gym Floor", "Weight Area", "Cardio Zone", "Training Area", "Equipment", "Locker Room"],
+      title: "Gallery",
+      items: ["Gym Floor", "Weight Area", "Cardio Zone", "Training Area", "Equipment", "Locker Room", "Stretching Zone", "Reception", "Group Classes"],
     },
     subscriptions: {
       title: "Subscriptions",
@@ -122,8 +122,8 @@ const translations = {
       bio2: "في ريدبون جيم، نؤمن أن اللياقة البدنية ليست مجرد رفع أوزان — بل هي بناء نمط حياة. كل برنامج مصمم مع مراعاة التشريح والميكانيكا الحيوية وأهدافك الشخصية. نهجنا يجمع بين أحدث منهجيات التدريب وخطط التغذية الشخصية لتحقيق نتائج حقيقية ودائمة.",
     },
     gallery: {
-      title: "مرافقنا",
-      items: ["صالة الجيم", "منطقة الأوزان", "منطقة الكارديو", "منطقة التدريب", "المعدات", "غرفة الخزائن"],
+      title: "المعرض",
+      items: ["صالة الجيم", "منطقة الأوزان", "منطقة الكارديو", "منطقة التدريب", "المعدات", "غرفة الخزائن", "منطقة الإطالة", "الاستقبال", "الحصص الجماعية"],
     },
     subscriptions: {
       title: "الاشتراكات",

@@ -7,6 +7,9 @@ const gradients = [
   "from-[#0D0E12] to-[#CC2421]/20",
   "from-[#CC2421]/20 to-[#323232]",
   "from-[#323232] to-[#CC2421]/15",
+  "from-[#CC2421]/15 to-[#323232]",
+  "from-[#323232] to-[#0D0E12]",
+  "from-[#0D0E12] to-[#CC2421]/20",
 ];
 
 export default function Gallery({ locale = "en" }: { locale?: Locale }) {

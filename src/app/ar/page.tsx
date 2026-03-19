@@ -18,7 +18,7 @@ export default function ArabicHome() {
         <About locale="ar" />
         <Gallery locale="ar" />
         <Subscriptions locale="ar" />
-        <Activities locale="ar" />
+        {/* <Activities locale="ar" /> */}
         <Contact locale="ar" />
       </main>
       <Footer locale="ar" />
