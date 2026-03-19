@@ -48,10 +48,30 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
               ))}
               <a
                 href={locale === "ar" ? "/en" : "/ar"}
-                className="text-xl hover:opacity-80 transition-opacity"
+                className="hover:opacity-80 transition-opacity"
                 title={locale === "ar" ? "English" : "العربية"}
               >
-                {locale === "ar" ? "🇬🇧" : "🇪🇬"}
+                {locale === "ar" ? (
+                  <svg className="w-7 h-5 rounded-sm" viewBox="0 0 60 30">
+                    <clipPath id="ukClip"><rect width="60" height="30"/></clipPath>
+                    <g clipPath="url(#ukClip)">
+                      <rect width="60" height="30" fill="#012169"/>
+                      <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
+                      <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" strokeWidth="4" clipPath="url(#ukClip)"/>
+                      <path d="M30,0 V30 M0,15 H60" stroke="#fff" strokeWidth="10"/>
+                      <path d="M30,0 V30 M0,15 H60" stroke="#C8102E" strokeWidth="6"/>
+                    </g>
+                  </svg>
+                ) : (
+                  <svg className="w-7 h-5 rounded-sm" viewBox="0 0 60 40">
+                    <rect width="60" height="13.33" fill="#CE1126"/>
+                    <rect y="13.33" width="60" height="13.33" fill="#fff"/>
+                    <rect y="26.66" width="60" height="13.34" fill="#000"/>
+                    <g transform="translate(30,20)">
+                      <path d="M-4,0 L0,-3 L4,0 L0,3Z" fill="#C7993E"/>
+                    </g>
+                  </svg>
+                )}
               </a>
             </div>
 
@@ -120,7 +140,27 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
               }}
               title={locale === "ar" ? "English" : "العربية"}
             >
-              {locale === "ar" ? "🇬🇧" : "🇪🇬"}
+              {locale === "ar" ? (
+                <svg className="w-10 h-7 rounded-sm mx-auto" viewBox="0 0 60 30">
+                  <clipPath id="ukClipM"><rect width="60" height="30"/></clipPath>
+                  <g clipPath="url(#ukClipM)">
+                    <rect width="60" height="30" fill="#012169"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
+                    <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" strokeWidth="4"/>
+                    <path d="M30,0 V30 M0,15 H60" stroke="#fff" strokeWidth="10"/>
+                    <path d="M30,0 V30 M0,15 H60" stroke="#C8102E" strokeWidth="6"/>
+                  </g>
+                </svg>
+              ) : (
+                <svg className="w-10 h-7 rounded-sm mx-auto" viewBox="0 0 60 40">
+                  <rect width="60" height="13.33" fill="#CE1126"/>
+                  <rect y="13.33" width="60" height="13.33" fill="#fff"/>
+                  <rect y="26.66" width="60" height="13.34" fill="#000"/>
+                  <g transform="translate(30,20)">
+                    <path d="M-4,0 L0,-3 L4,0 L0,3Z" fill="#C7993E"/>
+                  </g>
+                </svg>
+              )}
             </a>
           </div>
 
