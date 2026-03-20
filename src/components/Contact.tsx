@@ -10,7 +10,7 @@ export default function Contact({ locale = "en" }: { locale?: Locale }) {
     { icon: MapPin, label: content.contact.address, value: content.contact.addressValue, href: "https://maps.app.goo.gl/cAp9JP1HD69kTX4q8?g_st=ic" },
     { icon: Mail, label: content.contact.email, value: "ahmedmagedzzz1997@gmail.com", href: "mailto:ahmedmagedzzz1997@gmail.com" },
     { icon: Phone, label: content.contact.phone, value: "+201068521676", href: "tel:+201068521676" },
-    { icon: MessageCircle, label: "WhatsApp", value: "+201068521676", href: "https://wa.me/201068521676" },
+    { icon: MessageCircle, label: locale === "ar" ? "واتساب" : "WhatsApp", value: "+201068521676", href: "https://wa.me/201068521676" },
   ];
 
   return (
