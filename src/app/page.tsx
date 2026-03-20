@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Navbar locale="en" />
       <main>
-        <Hero />
+        <Hero locale="en" />
         {/* <Features locale="en" /> */}
         <About locale="en" />
         <Gallery locale="en" />
