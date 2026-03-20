@@ -29,12 +29,12 @@ export default function Hero({ locale = "en" }: { locale?: Locale }) {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[#CC2421]/5 rounded-full blur-[80px] animate-pulse" />
 
       {/* Corner accents */}
-      <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-[#CC2421]/20 m-8 hidden sm:block" />
-      <div className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-[#CC2421]/20 m-8 hidden sm:block" />
+      <div className="absolute top-0 left-0 w-20 h-20 sm:w-32 sm:h-32 border-l-2 border-t-2 border-[#CC2421]/20 m-4 sm:m-8" />
+      <div className="absolute bottom-0 right-0 w-20 h-20 sm:w-32 sm:h-32 border-r-2 border-b-2 border-[#CC2421]/20 m-4 sm:m-8" />
 
       {/* Vertical side lines */}
-      <div className="absolute left-8 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-[#CC2421]/20 to-transparent hidden lg:block" />
-      <div className="absolute right-8 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-[#CC2421]/20 to-transparent hidden lg:block" />
+      <div className="absolute left-4 sm:left-8 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-[#CC2421]/20 to-transparent" />
+      <div className="absolute right-4 sm:right-8 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-[#CC2421]/20 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-6">
