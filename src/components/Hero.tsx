@@ -70,35 +70,14 @@ export default function Hero({ locale = "en" }: { locale?: Locale }) {
           {locale === "ar" ? "ابدأ رحلتك معانا." : "TRANSFORM YOUR LIFE."}
         </h2>
 
-        {/* Subtitle */}
-        <p
-          className={`text-sm sm:text-base text-[#7F7F7F] tracking-[0.3em] uppercase mb-10 transition-all duration-1000 ease-out delay-900 ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
-        >
-          {content.hero.subtitle}
-        </p>
-
-        {/* CTA */}
-        <a
-          href="#contact"
-          className={`group relative rounded-md overflow-hidden px-10 py-4 text-sm font-bold tracking-widest uppercase text-[#F6E8D1] transition-all duration-1000 ease-out delay-[1100ms] ${
-            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
-        >
-          <div className="absolute inset-0 bg-[#CC2421] transition-transform duration-500 group-hover:scale-105" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#CC2421] to-[#a01d1a] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          <span className="relative z-10">{content.hero.cta}</span>
-        </a>
-
         {/* Scroll indicator */}
         <div
           className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-1000 ease-out delay-[1300ms] ${
             loaded ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="w-5 h-8 rounded-full border-2 border-[#7F7F7F]/30 flex justify-center pt-1.5">
-            <div className="w-1 h-2 rounded-full bg-[#CC2421] animate-bounce" />
+          <div className="w-7 h-11 rounded-full border-2 border-[#7F7F7F]/30 flex justify-center pt-2">
+            <div className="w-1.5 h-3 rounded-full bg-[#CC2421] animate-bounce" />
           </div>
         </div>
       </div>
