@@ -50,7 +50,7 @@ export default function MobileApp({ locale = "en" }: { locale?: Locale }) {
 
           {/* App mockup image */}
           <div className={`flex items-center justify-center ${isAr ? "lg:order-2" : ""}`}>
-            <div className="relative w-48 sm:w-56 lg:w-64">
+            <div className="relative w-48 sm:w-56 lg:w-52">
               <img
                 src="/app-mockup.jpg"
                 alt="RedBone Gym App"
