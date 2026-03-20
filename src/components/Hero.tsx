@@ -38,14 +38,14 @@ export default function Hero({ locale = "en" }: { locale?: Locale }) {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-6">
-        {/* Logo */}
-        <img
-          src="/logo.png"
-          alt="RedBone Gym"
-          className={`w-48 sm:w-56 lg:w-72 h-auto mb-8 transition-all duration-1000 ease-out ${
+        {/* Title */}
+        <h1
+          className={`text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-wider text-[#F6E8D1] mb-4 transition-all duration-1000 ease-out ${
             loaded ? "opacity-100 scale-100" : "opacity-0 scale-90"
           }`}
-        />
+        >
+          {locale === "ar" ? "ريدبون جيم" : "REDBONE GYM"}
+        </h1>
 
         {/* Divider */}
         <div
@@ -55,24 +55,24 @@ export default function Hero({ locale = "en" }: { locale?: Locale }) {
         />
 
         {/* Tagline */}
-        <h1
+        <h2
           className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-wider text-[#F6E8D1] mb-4 transition-all duration-1000 ease-out delay-500 ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
           {locale === "ar" ? "ابني جسمك. غيّر حياتك." : "BUILD YOUR BODY."}
-        </h1>
-        <h2
-          className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-wider text-[#CC2421] mb-8 transition-all duration-1000 ease-out delay-700 ${
+        </h2>
+        <h3
+          className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-wider text-[#CC2421] mb-12 transition-all duration-1000 ease-out delay-700 ${
             loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
           {locale === "ar" ? "ابدأ رحلتك معانا." : "TRANSFORM YOUR LIFE."}
-        </h2>
+        </h3>
 
         {/* Scroll indicator */}
         <div
-          className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-1000 ease-out delay-[1300ms] ${
+          className={`flex flex-col items-center gap-2 transition-all duration-1000 ease-out delay-[1000ms] ${
             loaded ? "opacity-100" : "opacity-0"
           }`}
         >
