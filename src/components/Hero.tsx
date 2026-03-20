@@ -14,7 +14,7 @@ export default function Hero({ locale = "en" }: { locale?: Locale }) {
   return (
     <section
       id="home"
-      className="relative flex min-h-[70vh] sm:min-h-screen items-center justify-center overflow-hidden bg-[#0D0E12]"
+      className="relative flex min-h-[70vh] sm:min-h-screen items-center justify-center overflow-hidden bg-[#0D0E12] pt-16 pb-4 sm:pt-0 sm:pb-0"
     >
       {/* Animated background grid */}
       <div className="absolute inset-0 opacity-[0.03]"
