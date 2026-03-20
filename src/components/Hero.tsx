@@ -14,7 +14,7 @@ export default function Hero({ locale = "en" }: { locale?: Locale }) {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[#0D0E12]"
+      className="relative flex min-h-[70vh] sm:min-h-screen items-center justify-center overflow-hidden bg-[#0D0E12]"
     >
       {/* Animated background grid */}
       <div className="absolute inset-0 opacity-[0.03]"
@@ -44,7 +44,7 @@ export default function Hero({ locale = "en" }: { locale?: Locale }) {
             loaded ? "opacity-100 scale-100" : "opacity-0 scale-90"
           }`}
         >
-          {locale === "ar" ? "ريدبون جيم" : "REDBONE GYM"}
+          {locale === "ar" ? (<><span className="text-[#CC2421]">ريدبون</span> جيم</>) : (<><span className="text-[#CC2421]">REDBONE</span> GYM</>)}
         </h1>
 
         {/* Divider */}

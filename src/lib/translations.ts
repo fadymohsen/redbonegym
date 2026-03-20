@@ -87,7 +87,7 @@ const translations = {
       getItOn: "Get it on",
     },
     footer: {
-      description: "Science-based fitness programs designed to transform your body and mind.",
+      description: "More than just a gym — RedBone is your second home. Whether you're just starting out or pushing past your limits, we've got the team, the energy, and the tools to help you become the best version of yourself. Come train with us and feel the difference.",
       workingHours: "Working Hours",
       followUs: "Follow Us",
       rights: "RedBone Gym. All rights reserved.",
@@ -180,7 +180,7 @@ const translations = {
       getItOn: "احصل عليه من",
     },
     footer: {
-      description: "برامج لياقة بدنية قائمة على العلم مصممة لتحويل جسمك وعقلك.",
+      description: "ريدبون مش مجرد جيم — ده بيتك التاني. سواء لسه بتبدأ أو بتحاول تكسر حدودك، عندنا الفريق والطاقة والأدوات اللي هتساعدك تبقى أحسن نسخة من نفسك. تعالى تمرن معانا وحس بالفرق.",
       workingHours: "ساعات العمل",
       followUs: "تابعنا",
       rights: "ريدبون جيم. جميع الحقوق محفوظة.",
