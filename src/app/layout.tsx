@@ -2,14 +2,47 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Redbone Gym",
-  description: "Redbone Gym - Science-Based Fitness Journey",
+  title: "RedBone Gym | Build Your Body. Transform Your Life.",
+  description:
+    "RedBone Gym in Nasr City, Cairo — your ultimate fitness destination. Science-based training programs, expert coaching, and a supportive community to help you reach your goals. Join us today!",
+  keywords: [
+    "RedBone Gym",
+    "gym",
+    "fitness",
+    "Nasr City",
+    "Cairo",
+    "personal training",
+    "bodybuilding",
+    "workout",
+    "gym near me",
+    "جيم",
+    "ريدبون",
+    "مدينة نصر",
+  ],
+  authors: [{ name: "RedBone Gym" }],
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
+  alternates: {
+    canonical: "https://redbonegym.com",
+    languages: {
+      "en": "https://redbonegym.com",
+      "ar": "https://redbonegym.com/ar",
+    },
   },
   openGraph: {
-    title: "Redbone Gym",
-    description: "Redbone Gym - Science-Based Fitness Journey",
+    title: "RedBone Gym | Build Your Body. Transform Your Life.",
+    description:
+      "Your ultimate fitness destination in Nasr City, Cairo. Science-based training, expert coaching, and a community that pushes you forward.",
+    url: "https://redbonegym.com",
+    siteName: "RedBone Gym",
+    locale: "en_US",
+    alternateLocale: "ar_EG",
     images: [
       {
         url: "/logo.png",
@@ -22,8 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Redbone Gym",
-    description: "Redbone Gym - Science-Based Fitness Journey",
+    title: "RedBone Gym | Build Your Body. Transform Your Life.",
+    description:
+      "Your ultimate fitness destination in Nasr City, Cairo. Science-based training, expert coaching, and a community that pushes you forward.",
     images: ["/logo.png"],
   },
 };
