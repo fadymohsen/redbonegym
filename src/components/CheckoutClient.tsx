@@ -131,7 +131,7 @@ export default function CheckoutClient() {
                     <p className="text-sm text-[#7F7F7F] mt-0.5">
                       {step.desc}
                       {step.extra && (
-                        <span className="ml-1 font-semibold text-[#F6E8D1]">{step.extra}</span>
+                        <span className="block font-semibold text-[#F6E8D1] mt-0.5" dir="ltr">{step.extra}</span>
                       )}
                     </p>
                   </div>
