@@ -42,10 +42,6 @@ export default function Subscriptions({ locale = "en" }: { locale?: Locale }) {
                   <span>{content.subscriptions.trainingPeriod}</span>
                   <span className="text-[#F6E8D1] font-medium">{plan.days} {content.subscriptions.days}</span>
                 </div>
-                <div className="flex justify-between border-b border-[#323232] pb-2">
-                  <span>{content.subscriptions.sessions}</span>
-                  <span className="text-[#F6E8D1] font-medium">{plan.sessions}</span>
-                </div>
               </div>
 
               <div className="my-6">
