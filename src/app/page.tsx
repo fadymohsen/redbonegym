@@ -6,7 +6,6 @@ import Gallery from "@/components/Gallery";
 import Subscriptions from "@/components/Subscriptions";
 import Activities from "@/components/Activities";
 import MobileApp from "@/components/MobileApp";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -21,7 +20,6 @@ export default function Home() {
         <Subscriptions locale="en" />
         {/* <Activities locale="en" /> */}
         <MobileApp locale="en" />
-        <Contact locale="en" />
       </main>
       <Footer locale="en" />
     </>

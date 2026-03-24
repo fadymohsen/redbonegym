@@ -12,7 +12,6 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
     { label: content.nav.about, href: "#about" },
     { label: content.nav.gallery, href: "#gallery" },
     { label: content.nav.subscriptions, href: "#subscriptions" },
-    { label: content.nav.contact, href: "#contact" },
   ];
 
   useEffect(() => {
