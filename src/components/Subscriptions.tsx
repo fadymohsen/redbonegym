@@ -2,10 +2,10 @@ import { Phone } from "lucide-react";
 import { Locale, t } from "@/lib/translations";
 
 const plans = [
-  { name: { en: "1 Month", ar: "شهر واحد" }, price: "700", days: 30, sessions: 0, featured: false, badge: false },
-  { name: { en: "3 Months", ar: "٣ أشهر" }, price: "1,600", days: 90, sessions: 0, featured: false, badge: false },
-  { name: { en: "6 Months", ar: "٦ أشهر" }, price: "2,500", days: 180, sessions: 0, featured: false, badge: false },
-  { name: { en: "1 Year", ar: "سنة واحدة" }, price: "3,900", days: 365, sessions: 0, featured: true, badge: true },
+  { name: { en: "1 Month", ar: "شهر واحد" }, slug: "1-month", price: "700", days: 30, sessions: 0, featured: false, badge: false },
+  { name: { en: "3 Months", ar: "٣ أشهر" }, slug: "3-months", price: "1,600", days: 90, sessions: 0, featured: false, badge: false },
+  { name: { en: "6 Months", ar: "٦ أشهر" }, slug: "6-months", price: "2,500", days: 180, sessions: 0, featured: false, badge: false },
+  { name: { en: "1 Year", ar: "سنة واحدة" }, slug: "1-year", price: "3,900", days: 365, sessions: 0, featured: true, badge: true },
 ];
 
 export default function Subscriptions({ locale = "en" }: { locale?: Locale }) {
@@ -56,7 +56,7 @@ export default function Subscriptions({ locale = "en" }: { locale?: Locale }) {
               </div>
 
               <a
-                href="#contact"
+                href={`/checkout?plan=${plan.slug}&locale=${locale}`}
                 className={`mt-auto w-full rounded-md py-2.5 text-sm font-semibold text-center transition-colors ${
                   plan.featured
                     ? "bg-[#CC2421] text-[#F6E8D1] hover:bg-[#a01d1a]"
