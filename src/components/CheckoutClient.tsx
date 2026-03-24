@@ -69,7 +69,7 @@ export default function CheckoutClient() {
   const c = content[locale];
 
   const steps = [
-    { icon: CreditCard, title: c.step1Title, desc: c.step1Desc, extra: `+2 ${PHONE.slice(2)}` },
+    { icon: CreditCard, title: c.step1Title, desc: c.step1Desc, extra: "+20 106 852 1676" },
     { icon: MessageCircle, title: c.step2Title, desc: c.step2Desc, extra: null },
     { icon: CheckCircle, title: c.step3Title, desc: c.step3Desc, extra: null },
   ];
