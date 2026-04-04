@@ -145,7 +145,8 @@ export default function CheckoutClient() {
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.error || "Payment failed. Please try again.");
+        const msg = typeof data?.error === "string" ? data.error : typeof data?.message === "string" ? data.message : "Payment failed. Please try again.";
+        setError(msg);
         setLoading(false);
         return;
       }

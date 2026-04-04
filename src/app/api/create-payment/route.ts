@@ -45,8 +45,14 @@ export async function POST(request: Request) {
     const data = await response.json();
 
     if (!response.ok) {
+      const errMsg = typeof data?.message === "string"
+        ? data.message
+        : typeof data?.error === "string"
+        ? data.error
+        : JSON.stringify(data) || "Payment creation failed";
+      console.error("Fawaterak API error:", response.status, errMsg);
       return NextResponse.json(
-        { error: data.message || "Payment creation failed" },
+        { error: errMsg },
         { status: response.status }
       );
     }
