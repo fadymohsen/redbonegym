@@ -23,8 +23,8 @@ const PHONE = "201068521676";
 
 const paymentMethods = [
   { id: 2, name: { en: "Credit / Debit Card", ar: "بطاقة ائتمان / خصم" }, icon: CreditCard },
-  { id: 1, name: { en: "Fawry", ar: "فوري" }, icon: Building },
-  { id: 6, name: { en: "Mobile Wallet", ar: "محفظة إلكترونية" }, icon: Smartphone },
+  { id: 3, name: { en: "Fawry", ar: "فوري" }, icon: Building },
+  { id: 4, name: { en: "Mobile Wallet", ar: "محفظة إلكترونية" }, icon: Smartphone },
 ];
 
 export default function CheckoutClient() {
