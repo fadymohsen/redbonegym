@@ -1,14 +1,28 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Locale, t } from "@/lib/translations";
 
+function getLocaleSwitchHref(pathname: string, locale: Locale) {
+  if (locale === "ar") {
+    // Currently Arabic → switch to English: remove /ar prefix
+    const stripped = pathname.replace(/^\/ar/, "") || "/";
+    return stripped;
+  }
+  // Currently English → switch to Arabic: add /ar prefix
+  const clean = pathname === "/" ? "" : pathname;
+  return `/ar${clean}`;
+}
+
 export default function Navbar({ locale = "en" }: { locale?: Locale }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
   const content = t(locale);
 
   const prefix = locale === "ar" ? "/ar" : "";
+  const switchHref = getLocaleSwitchHref(pathname, locale);
   const navLinks = [
     { label: content.nav.about, href: `${prefix}/about` },
     { label: content.nav.subscriptions, href: "#subscriptions" },
@@ -46,7 +60,7 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
                 </a>
               ))}
               <a
-                href={locale === "ar" ? "/en" : "/ar"}
+                href={switchHref}
                 className="hover:opacity-80 transition-opacity"
                 title={locale === "ar" ? "English" : "العربية"}
               >
@@ -111,7 +125,7 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
               </a>
             ))}
             <a
-              href={locale === "ar" ? "/en" : "/ar"}
+              href={switchHref}
               onClick={() => setMobileOpen(false)}
               className={`w-full text-center py-4 text-3xl transition-all duration-500 ease-out hover:opacity-80 ${
                 mobileOpen
