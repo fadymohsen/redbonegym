@@ -43,6 +43,9 @@ export default function CheckoutClient() {
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [fawryCode, setFawryCode] = useState("");
+  const [fawryExpire, setFawryExpire] = useState("");
+  const [walletReference, setWalletReference] = useState("");
 
   const whatsappMessage = isAr
     ? `مرحبًا، أريد الاشتراك في باقة ${plan.ar} بسعر ${plan.price} جنيه. أرجو تفعيل اشتراكي.`
@@ -151,14 +154,31 @@ export default function CheckoutClient() {
         return;
       }
 
-      // Redirect to Fawaterak payment page
-      const redirectUrl = data?.data?.payment_data?.redirectTo;
-      if (redirectUrl) {
-        window.location.href = redirectUrl;
-      } else {
-        setError("Could not get payment URL. Please try again.");
-        setLoading(false);
+      const paymentData = data?.data?.payment_data;
+
+      // Credit Card — redirect
+      if (paymentData?.redirectTo) {
+        window.location.href = paymentData.redirectTo;
+        return;
       }
+
+      // Fawry — show reference code
+      if (paymentData?.fawryCode) {
+        setFawryCode(paymentData.fawryCode);
+        setFawryExpire(paymentData.expireDate || "");
+        setLoading(false);
+        return;
+      }
+
+      // Mobile Wallet — show reference
+      if (paymentData?.meezaReference) {
+        setWalletReference(String(paymentData.meezaReference));
+        setLoading(false);
+        return;
+      }
+
+      setError(isAr ? "لم نتمكن من إنشاء الدفع. حاول مرة أخرى." : "Could not process payment. Please try again.");
+      setLoading(false);
     } catch {
       setError("Something went wrong. Please try again.");
       setLoading(false);
@@ -229,8 +249,66 @@ export default function CheckoutClient() {
             </button>
           </div>
 
+          {/* Fawry Code Result */}
+          {fawryCode && (
+            <div className="rounded-xl border border-[#CC2421] bg-[#CC2421]/5 p-8 text-center space-y-4">
+              <Building className="h-12 w-12 text-[#CC2421] mx-auto" />
+              <h2 className="text-xl font-bold text-[#F6E8D1]">
+                {isAr ? "كود فوري للدفع" : "Your Fawry Payment Code"}
+              </h2>
+              <div className="bg-[#323232]/50 rounded-lg p-4">
+                <p className="text-3xl font-mono font-bold text-[#CC2421] tracking-widest" dir="ltr">
+                  {fawryCode}
+                </p>
+              </div>
+              <p className="text-sm text-[#7F7F7F]">
+                {isAr
+                  ? "توجه لأي فرع فوري وادفع بالكود ده"
+                  : "Visit any Fawry outlet and pay using this code"}
+              </p>
+              {fawryExpire && (
+                <p className="text-xs text-[#7F7F7F]">
+                  {isAr ? "صالح حتى:" : "Expires:"}{" "}
+                  <span className="text-[#F6E8D1]" dir="ltr">{fawryExpire}</span>
+                </p>
+              )}
+              <button
+                onClick={() => { setFawryCode(""); setFawryExpire(""); }}
+                className="mt-4 text-sm text-[#7F7F7F] hover:text-[#F6E8D1] transition-colors underline"
+              >
+                {isAr ? "دفع مرة أخرى" : "Make another payment"}
+              </button>
+            </div>
+          )}
+
+          {/* Mobile Wallet Result */}
+          {walletReference && (
+            <div className="rounded-xl border border-[#CC2421] bg-[#CC2421]/5 p-8 text-center space-y-4">
+              <Smartphone className="h-12 w-12 text-[#CC2421] mx-auto" />
+              <h2 className="text-xl font-bold text-[#F6E8D1]">
+                {isAr ? "رقم مرجع المحفظة" : "Wallet Payment Reference"}
+              </h2>
+              <div className="bg-[#323232]/50 rounded-lg p-4">
+                <p className="text-3xl font-mono font-bold text-[#CC2421] tracking-widest" dir="ltr">
+                  {walletReference}
+                </p>
+              </div>
+              <p className="text-sm text-[#7F7F7F]">
+                {isAr
+                  ? "ادفع من محفظتك الإلكترونية باستخدام الرقم المرجعي ده"
+                  : "Pay from your mobile wallet using this reference number"}
+              </p>
+              <button
+                onClick={() => setWalletReference("")}
+                className="mt-4 text-sm text-[#7F7F7F] hover:text-[#F6E8D1] transition-colors underline"
+              >
+                {isAr ? "دفع مرة أخرى" : "Make another payment"}
+              </button>
+            </div>
+          )}
+
           {/* Online Payment Tab */}
-          {tab === "online" && (
+          {tab === "online" && !fawryCode && !walletReference && (
             <form onSubmit={handlePayment} className="space-y-6">
               {/* Payment method selection */}
               <div>
