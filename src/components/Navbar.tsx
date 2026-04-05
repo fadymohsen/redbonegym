@@ -8,9 +8,9 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const content = t(locale);
 
+  const prefix = locale === "ar" ? "/ar" : "";
   const navLinks = [
-    { label: content.nav.about, href: "#about" },
-    { label: content.nav.gallery, href: "#gallery" },
+    { label: content.nav.about, href: `${prefix}/about` },
     { label: content.nav.subscriptions, href: "#subscriptions" },
   ];
 

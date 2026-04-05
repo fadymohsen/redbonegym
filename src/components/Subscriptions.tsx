@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { Phone, ArrowRight } from "lucide-react";
 import { Locale, t } from "@/lib/translations";
 
 const plans = [
@@ -10,6 +10,8 @@ const plans = [
 
 export default function Subscriptions({ locale = "en" }: { locale?: Locale }) {
   const content = t(locale);
+  const isAr = locale === "ar";
+  const plansHref = isAr ? "/ar/subscriptions" : "/subscriptions";
 
   return (
     <section id="subscriptions" className="bg-[#0D0E12] py-20 px-4">
@@ -65,17 +67,26 @@ export default function Subscriptions({ locale = "en" }: { locale?: Locale }) {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center space-y-4">
           <p className="text-xl text-[#7F7F7F] mb-6">
             {content.subscriptions.cta}
           </p>
-          <a
-            href="tel:+201068521676"
-            className="inline-flex items-center gap-2 rounded-md bg-[#CC2421] px-8 py-3 text-lg font-semibold text-[#F6E8D1] hover:bg-[#a01d1a] transition-colors"
-          >
-            <Phone className="h-5 w-5" />
-            {content.subscriptions.callNow}
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={plansHref}
+              className="inline-flex items-center gap-2 rounded-md bg-[#CC2421] px-8 py-3 text-lg font-semibold text-[#F6E8D1] hover:bg-[#a01d1a] transition-colors"
+            >
+              {content.subscriptionsPage.viewPlans}
+              <ArrowRight className={`h-5 w-5 ${isAr ? "rotate-180" : ""}`} />
+            </a>
+            <a
+              href="tel:+201068521676"
+              className="inline-flex items-center gap-2 rounded-md border border-[#323232] bg-[#323232]/50 px-8 py-3 text-lg font-semibold text-[#F6E8D1] hover:bg-[#7F7F7F]/30 transition-colors"
+            >
+              <Phone className="h-5 w-5" />
+              {content.subscriptions.callNow}
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,10 @@
+import { ArrowRight } from "lucide-react";
 import { Locale, t } from "@/lib/translations";
 
 export default function About({ locale = "en" }: { locale?: Locale }) {
   const content = t(locale);
+  const isAr = locale === "ar";
+  const aboutHref = isAr ? "/ar/about" : "/about";
 
   return (
     <section id="about" className="bg-[#0D0E12] py-20 px-4">
@@ -27,9 +30,16 @@ export default function About({ locale = "en" }: { locale?: Locale }) {
             <p className="text-[#7F7F7F] leading-relaxed mb-4">
               {content.about.bio1}
             </p>
-            <p className="text-[#7F7F7F] leading-relaxed">
+            <p className="text-[#7F7F7F] leading-relaxed mb-8">
               {content.about.bio2}
             </p>
+            <a
+              href={aboutHref}
+              className="inline-flex items-center gap-2 rounded-md bg-[#CC2421] px-6 py-3 text-sm font-semibold text-[#F6E8D1] hover:bg-[#a01d1a] transition-colors"
+            >
+              {content.aboutPage.ownerCta}
+              <ArrowRight className={`h-4 w-4 ${isAr ? "rotate-180" : ""}`} />
+            </a>
           </div>
         </div>
       </div>
