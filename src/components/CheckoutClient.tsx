@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   CheckCircle,
@@ -55,6 +55,14 @@ export default function CheckoutClient() {
   const [fawryCode, setFawryCode] = useState("");
   const [fawryExpire, setFawryExpire] = useState("");
   const [walletReference, setWalletReference] = useState("");
+
+  useEffect(() => {
+    const handlePageShow = (e: PageTransitionEvent) => {
+      if (e.persisted) setLoading(false);
+    };
+    window.addEventListener("pageshow", handlePageShow);
+    return () => window.removeEventListener("pageshow", handlePageShow);
+  }, []);
 
   const whatsappMessage = isAr
     ? `مرحبًا، أريد الاشتراك في باقة ${plan.ar} بسعر ${plan.price} جنيه. أرجو تفعيل اشتراكي.`
