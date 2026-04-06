@@ -53,19 +53,14 @@ const translations = {
     },
     activities: {
       title: "Activities & Services",
+      viewAll: "View All Services",
       items: [
-        {
-          title: "Enjoy 1 Day",
-          description: "Experience our gym with a complimentary one-day trial session and see what RedBone Gym has to offer.",
-        },
-        {
-          title: "InBody",
-          description: "Get a detailed InBody body composition analysis to track your progress and fine-tune your training plan.",
-        },
-        {
-          title: "Physical Therapy",
-          description: "Professional physical therapy sessions for recovery, rehabilitation, and injury prevention.",
-        },
+        { name: "Dr. Mostafa", price: "300" },
+        { name: "Dr. Mohsen", price: "300" },
+        { name: "Cupping & Massage", price: "600" },
+        { name: "InBody Analysis", price: "100" },
+        { name: "Day Use", price: "free", freeLabel: "Free" },
+        { name: "Kick Boxing 🥊", price: "800" },
       ],
     },
     contact: {
@@ -254,19 +249,14 @@ const translations = {
     },
     activities: {
       title: "الأنشطة والخدمات",
+      viewAll: "شوف كل الخدمات",
       items: [
-        {
-          title: "استمتع بيوم واحد",
-          description: "جرّب صالتنا الرياضية بجلسة تجريبية مجانية ليوم واحد واكتشف ما يقدمه ريدبون جيم.",
-        },
-        {
-          title: "إنبودي",
-          description: "احصل على تحليل مفصّل لتكوين الجسم باستخدام جهاز إنبودي لتتبع تقدمك وضبط خطتك التدريبية.",
-        },
-        {
-          title: "العلاج الطبيعي",
-          description: "جلسات علاج طبيعي احترافية للتعافي وإعادة التأهيل والوقاية من الإصابات.",
-        },
+        { name: "دكتور مصطفى", price: "300" },
+        { name: "دكتور محسن", price: "300" },
+        { name: "حجامة وماساج", price: "600" },
+        { name: "تحليل InBody", price: "100" },
+        { name: "يوم تجريبي", price: "free", freeLabel: "مجانًا" },
+        { name: "كيك بوكسينج 🥊", price: "800" },
       ],
     },
     contact: {

@@ -18,7 +18,7 @@ export default function Home() {
         <About locale="en" />
         <Gallery locale="en" />
         <Subscriptions locale="en" />
-        {/* <Activities locale="en" /> */}
+        <Activities locale="en" />
         <MobileApp locale="en" />
       </main>
       <Footer locale="en" />
