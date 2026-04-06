@@ -8,6 +8,7 @@ const translations = {
       subscriptions: "Subscriptions",
       facilities: "Facilities",
       contact: "Contact Us",
+      services: "Services",
     },
     hero: {
       subtitle: "Science-Based Journey",
@@ -153,6 +154,46 @@ const translations = {
       ],
       viewPlans: "View All Plans",
     },
+    servicesPage: {
+      heroTitle: "Our Services",
+      heroSubtitle: "Professional services to complement your fitness journey. Book your session today.",
+      bookNow: "Book via WhatsApp",
+      free: "Free",
+      services: [
+        {
+          name: "Dr. Mostafa",
+          description: "Professional physiotherapy and rehabilitation sessions with Dr. Mostafa. Expert care for injury recovery, pain management, and performance optimization.",
+          price: "300",
+        },
+        {
+          name: "Dr. Mohsen",
+          description: "Specialized medical consultations and sports medicine with Dr. Mohsen. Get expert advice on training-related health concerns and injury prevention.",
+          price: "300",
+        },
+        {
+          name: "Cupping & Massage",
+          description: "Traditional cupping therapy and professional massage sessions for muscle recovery, improved blood circulation, and deep relaxation.",
+          price: "600",
+        },
+        {
+          name: "InBody Analysis",
+          description: "Detailed body composition analysis using InBody technology. Track your muscle mass, body fat percentage, and water balance to fine-tune your training plan.",
+          price: "100",
+        },
+        {
+          name: "Day Use",
+          description: "Experience RedBone Gym with a complimentary day pass. Try our equipment, feel the atmosphere, and see why our members love training here.",
+          price: "free",
+        },
+        {
+          name: "Kick Boxing 🥊",
+          description: "High-energy kickboxing classes that build strength, improve cardio, and teach you real self-defense techniques. Suitable for all fitness levels.",
+          price: "800",
+        },
+      ],
+      ctaTitle: "Ready to Book?",
+      ctaDesc: "Reserve your session now via WhatsApp and our team will confirm your appointment.",
+    },
     footer: {
       description: "More than just a gym — RedBone is your second home. Whether you're just starting out or pushing past your limits, we've got the team, the energy, and the tools to help you become the best version of yourself. Come train with us and feel the difference.",
       workingHours: "Working Hours",
@@ -168,6 +209,7 @@ const translations = {
       subscriptions: "الاشتراكات",
       facilities: "المرافق",
       contact: "تواصل معنا",
+      services: "الخدمات",
     },
     hero: {
       subtitle: "رحلة قائمة على العلم",
@@ -312,6 +354,46 @@ const translations = {
         { title: "مواعيد مرنة", desc: "مفتوحين من ٦ الصبح لنص الليل — تمرن في أي وقت يناسبك." },
       ],
       viewPlans: "شوف كل الباقات",
+    },
+    servicesPage: {
+      heroTitle: "خدماتنا",
+      heroSubtitle: "خدمات احترافية تكمّل رحلتك الرياضية. احجز جلستك النهارده.",
+      bookNow: "احجز عبر واتساب",
+      free: "مجانًا",
+      services: [
+        {
+          name: "دكتور مصطفى",
+          description: "جلسات علاج طبيعي وتأهيل احترافية مع دكتور مصطفى. رعاية متخصصة للتعافي من الإصابات وإدارة الألم وتحسين الأداء.",
+          price: "300",
+        },
+        {
+          name: "دكتور محسن",
+          description: "استشارات طبية متخصصة وطب رياضي مع دكتور محسن. احصل على نصائح خبيرة بخصوص المشاكل الصحية المتعلقة بالتدريب والوقاية من الإصابات.",
+          price: "300",
+        },
+        {
+          name: "حجامة وماساج",
+          description: "جلسات حجامة تقليدية وماساج احترافي لاستشفاء العضلات وتحسين الدورة الدموية والاسترخاء العميق.",
+          price: "600",
+        },
+        {
+          name: "تحليل InBody",
+          description: "تحليل مفصّل لتكوين الجسم باستخدام تقنية إنبودي. تابع كتلة العضلات ونسبة الدهون وتوازن المياه لضبط خطتك التدريبية.",
+          price: "100",
+        },
+        {
+          name: "يوم تجريبي",
+          description: "جرّب ريدبون جيم بيوم مجاني. جرب المعدات، حس بالأجواء، واعرف ليه أعضاؤنا بيحبوا يتمرنوا هنا.",
+          price: "free",
+        },
+        {
+          name: "كيك بوكسينج 🥊",
+          description: "حصص كيك بوكسينج عالية الطاقة بتبني القوة وتحسّن الكارديو وتعلمك تقنيات دفاع عن النفس حقيقية. مناسبة لكل المستويات.",
+          price: "800",
+        },
+      ],
+      ctaTitle: "جاهز تحجز؟",
+      ctaDesc: "احجز جلستك دلوقتي عبر واتساب وفريقنا هيأكد معادك.",
     },
     footer: {
       description: "ريدبون مش مجرد جيم — ده بيتك التاني. سواء لسه بتبدأ أو بتحاول تكسر حدودك، عندنا الفريق والطاقة والأدوات اللي هتساعدك تبقى أحسن نسخة من نفسك. تعالى تمرن معانا وحس بالفرق.",

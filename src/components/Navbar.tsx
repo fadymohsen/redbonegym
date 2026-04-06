@@ -26,6 +26,7 @@ export default function Navbar({ locale = "en" }: { locale?: Locale }) {
   const navLinks = [
     { label: content.nav.about, href: `${prefix}/about` },
     { label: content.nav.subscriptions, href: `${prefix}/subscriptions` },
+    { label: content.nav.services, href: `${prefix}/services` },
   ];
 
   useEffect(() => {
