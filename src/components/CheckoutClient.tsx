@@ -13,9 +13,9 @@ import {
 } from "lucide-react";
 
 const plans = {
-  "1-month": { en: "1 Month", ar: "شهر واحد", price: "700", days: 30 },
-  "3-months": { en: "3 Months", ar: "٣ أشهر", price: "1,600", days: 90 },
-  "6-months": { en: "6 Months", ar: "٦ أشهر", price: "2,500", days: 180 },
+  "1-month": { en: "1 Month", ar: "شهر واحد", price: "750", days: 30 },
+  "3-months": { en: "3 Months", ar: "٣ أشهر", price: "1,900", days: 90 },
+  "6-months": { en: "6 Months", ar: "٦ أشهر", price: "2,900", days: 180 },
   "1-year": { en: "1 Year", ar: "سنة واحدة", price: "3,900", days: 365 },
 };
 

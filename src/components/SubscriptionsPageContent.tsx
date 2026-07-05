@@ -2,9 +2,9 @@ import { CheckCircle, Dumbbell, Clock, Trophy, Users } from "lucide-react";
 import { Locale, t } from "@/lib/translations";
 
 const plans = [
-  { name: { en: "1 Month", ar: "شهر واحد" }, slug: "1-month", price: "700", days: 30, featured: false, badge: false },
-  { name: { en: "3 Months", ar: "٣ أشهر" }, slug: "3-months", price: "1,600", days: 90, featured: false, badge: false },
-  { name: { en: "6 Months", ar: "٦ أشهر" }, slug: "6-months", price: "2,500", days: 180, featured: false, badge: false },
+  { name: { en: "1 Month", ar: "شهر واحد" }, slug: "1-month", price: "750", days: 30, featured: false, badge: false },
+  { name: { en: "3 Months", ar: "٣ أشهر" }, slug: "3-months", price: "1,900", days: 90, featured: false, badge: false },
+  { name: { en: "6 Months", ar: "٦ أشهر" }, slug: "6-months", price: "2,900", days: 180, featured: false, badge: false },
   { name: { en: "1 Year", ar: "سنة واحدة" }, slug: "1-year", price: "3,900", days: 365, featured: true, badge: true },
 ];
 
